@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base styles for larger screens */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        #container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .content-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+        }
+        
+        #sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            height: 100%;
+        }
+        
+        #content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-left: 250px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+        }
+        
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        ul li a:hover {
+            background-color: #555;
+        }
+        
+        ul li a i {
+            margin-right: 10px;
+        }
+        
+        section {
+            display: none;
+            margin-bottom: 20px;
+            padding-top: 50px;
+            scroll-margin-top: 50px;
+        }
+        
+        section.active {
+            display: block;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .about-content img {
+            margin-right: 20px;
+            border: 2px solid #000;
+            width: 500px;
+            height: 500px;
+            border-radius: 5px;
+        }
+        
+        .about-content div {
+            max-width: 600px;
+        }
+        
+        .file-download {
+            margin-top: 20px;
+        }
+        
+        .file-download button {
+            background-color: #007bff;
+            color: #fff;
+            border: 2px solid #007bff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+        }
+        
+        .file-download button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            box-shadow: 0 6px 8px rgba(0, 123, 255, 0.2);
+        }
+        
+        .file-download button:focus {
+            outline: none;
+        }
+        
+        .file-download button:active {
+            transform: translateY(1px);
+        }
+        /* Media query for smaller screens */
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                /* Stack sidebar and content vertically */
+            }
+            #content {
+                margin-left: 0;
+                /* Remove margin to stack content below sidebar */
+                padding: 20px;
+            }
+            #sidebar {
+                width: 100%;
+                /* Full width for sidebar on smaller screens */
+                position: static;
+                /* Normal flow for sidebar content */
+                margin-bottom: 20px;
+                /* Space below sidebar */
+            }
+            .about-content img {
+                width: 100%;
+                /* Full width for images on smaller screens */
+                height: auto;
+                /* Maintain aspect ratio */
+                margin-bottom: 20px;
+                /* Space below image */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="content-wrapper">
+            <div id="sidebar">
+                <h1>Welcome to My Website</h1>
+                <ul>
+                    <li><a href="#about"><i class="fas fa-user"></i>About Me</a></li>
+                    <li><a href="#education"><i class="fas fa-graduation-cap"></i>Education</a></li>
+                    <li><a href="#hobbies"><i class="fas fa-heart"></i>My Hobbies</a></li>
+                    <li><a href="#projects"><i class="fas fa-briefcase"></i>Projects</a></li>
+                    <li><a href="#experience"><i class="fas fa-briefcase"></i>Work Experience</a></li>
+                    <li>
+                        <form action="Resume (2).pdf" method="get" target="_blank">
+                            <button type="submit"><i class="fas fa-file"></i>Download Resume</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <section id="about" class="active">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                        <img src="IDPhoto.jpg" alt="Your Image">
+                        <div>
+                            <p>Hello! My name is Seipati Frans, and I am currently an honours student at the University of Johannesburg, pursuing a BCom in Information Systems. I am passionate about leveraging technology to solve complex problems and constantly
+                                seek opportunities to learn and grow in this dynamic field. Throughout my academic journey, I have maintained a high standard of excellence, reflected in my consistent academic achievements. My dedication to learning extends
+                                beyond the classroom. I have actively engaged in extracurricular activities and leadership roles that have honed my skills and shaped my character. Outside of my academic and professional pursuits, I am a social and approachable
+                                person who enjoys networking and making connections. I am also passionate about soccer, which I play regularly, and I find joy in volunteering, particularly at a primary school through the Community Engagement initiative
+                                at my university. These activities have not only enriched my personal life but have also contributed to my development as a well-rounded individual. I am a fast learner, versatile, and highly committed to my goals. I possess
+                                strong verbal and written communication skills, strategic thinking, and an ability to adapt to different situations. My technical skills include basic knowledge of JavaScript, HTML, CSS, SQL, RPA and proficiency in Microsoft
+                                Office and Excel. Looking ahead, I aspire to contribute to technological innovation and research in Information Systems. I am driven by a desire to make a meaningful impact and am constantly seeking opportunities to expand
+                                my knowledge and skills in this ever-evolving field</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="education">
+                    <h2>Education</h2>
+                    <h3>1. University of Johannesburg</h3>
+                    <p><strong>BComHons  in Information Systems</strong></p>
+                    <p><em>January 2024 - Present</em></p>
+                    <ul>
+                        <li>Completing my honours degree in Bcom information systems</li>
+                    </ul>
+                    <h3>2. University of Johannesburg</h3>
+                    <p><strong>BCom in Information Systems</strong></p>
+                    <p><em>January 2021 - December 2023</em></p>
+                    <ul>
+                        <li>Completed a 3-year undergraduate degree in Information Systems.</li>
+                        <li>Developed a strong foundation in information systems principles, programming languages, and project management methodologies.</li>
+                        <li>Consistently demonstrated commitment to academic excellence and actively participated in various university initiatives.</li>
+                    </ul>
+
+                    <h3>3. Petunia Secondary School</h3>
+                    <p><strong>Matriculated</strong></p>
+                    <p><em>December 2020</em></p>
+                    <ul>
+                        <li>Graduated with high academic honors, consistently achieving top positions in my grades.</li>
+                        <li>Participated in the Free State Province Sesotho Debate Competition and won at the provincial level.</li>
+                        <li>Won a silver medal in the regional Eskom Expo for Young Scientists and a bronze medal in the International Science Fair in Grade 8 (2016).</li>
+                    </ul>
+                </section>
+
+                <section id="hobbies">
+                    <h2>My Hobbies</h2>
+                    <h3>Soccer</h3>
+                    <ul>
+                        <li>I am passionate about playing soccer, which not only keeps me physically active but also teaches me valuable lessons in teamwork, discipline, and resilience.</li>
+                    </ul>
+
+                    <h3>Networking and Socializing</h3>
+                    <ul>
+                        <li>As a very social and approachable person, I enjoy spending my free time making connections and networking with people. This helps me build strong relationships and improve my interpersonal skills.</li>
+                    </ul>
+
+                    <h3>Volunteering</h3>
+                    <ul>
+                        <li>I am committed to giving back to the community. In my spare time, I volunteer through the Community Engagement initiative at the University of Johannesburg. This experience has been enriching and has helped me develop a deeper
+                            sense of empathy and community responsibility.</li>
+                    </ul>
+
+                    <h3>Learning New Skills</h3>
+                    <ul>
+                        <li>I have a passion for continuous learning and self-improvement. Whether it's through formal education, online courses, or self-study, I am always eager to acquire new knowledge and skills, particularly in the field of information
+                            technology.
+                        </li>
+                    </ul>
+
+                    <h3>Debating</h3>
+                    <ul>
+                        <li>I have a keen interest in debating, which started in high school where I participated in and won the Free State Province Sesotho Debate Competition. Debating helps me enhance my critical thinking, public speaking, and argumentation
+                            skills.
+                        </li>
+                    </ul>
+
+                    <h3>Scientific Exploration</h3>
+                    <ul>
+                        <li>My interest in science was sparked early on when I participated in the Eskom Expo for Young Scientists, where I won a silver medal at the regional level and a bronze medal at the International Science Fair. I continue to explore
+                            scientific topics and innovations in my free time.</li>
+                    </ul>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <h3>WithU</h3>
+                    <div class="about-content">
+                        <img src="logo.png" alt="WithU Logo">
+                        <div>
+                            <p>WithU is a year-long project that I completed alongside my classmates. It is a web app created using technologies like PHP, HTML, CSS, Ubuntu, JavaScript, and MySQL. WithU aims to connect struggling students with sponsors,
+                                facilitating support beyond financial aid, enhancing educational opportunities.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="experience">
+                    <h2>Work Experience</h2>
+
+                    <h3>1. RPA Developer Intern</h3>
+                    <p><strong>Firtech Intelligence Holdings</strong><br>
+                        <em>January 2024 - March 2024</em></p>
+                    <ul>
+                        <li>Interned as an RPA Developer at Firtech Intelligence Holdings, specializing in Robotic Process Automation (RPA).</li>
+                        <li>Engaged in the design, development, and implementation of automated solutions to streamline business processes.</li>
+                        <li>Collaborated with cross-functional teams to understand requirements and deliver efficient RPA solutions.</li>
+                        <li>Gained hands-on experience in UiPath or other RPA platforms, enhancing skills in process automation and workflow optimization.</li>
+                    </ul>
+
+                    <h3>2. Secretary and Community Engagement Officer</h3>
+                    <p><strong>University of Johannesburg</strong><br>
+                        <em>January 2023 - November 2023</em></p>
+                    <ul>
+                        <li>Played a pivotal role as the Secretary and Community Engagement Officer for a ladies' residence, focusing on fostering community spirit and managing administrative tasks.</li>
+                        <li>Led various projects to enhance residence life and community engagement, developing strong leadership and project management skills.</li>
+                        <li>Improved social skills through extensive interaction with students and stakeholders, contributing to a vibrant and inclusive residence environment.</li>
+                    </ul>
+
+                    <h3>3. Intern</h3>
+                    <p><strong>South African Graduate Employers Association (SAGEA)</strong><br>
+                        <em>January 2023 - February 2023</em></p>
+                    <ul>
+                        <li>Interned as part of the "Quantify Your Future" initiative at SAGEA, focusing on project management and data analysis.</li>
+                        <li>Acquired practical experience in data cleaning, team collaboration, and project execution methodologies.</li>
+                        <li>Strengthened analytical and problem-solving abilities through involvement in organizational projects, gaining insights into corporate environments and professional dynamics.</li>
+                    </ul>
+
+                    <p>These experiences have provided me with a robust foundation in both practical skills and theoretical knowledge, aligning with my academic pursuits in Information Systems at the University of Johannesburg.</p>
+                </section>
+
+                <section id="resume">
+                    <h2>Resume</h2>
+                    <div class="file-download">
+                        <form action="Resume (2).pdf" method="get" target="_blank">
+                            <button type="submit"><i class="fas fa-file"></i>Download Resume</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show/hide sections based on clicked link
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the clicked section
+            document.querySelector(sectionId).classList.add('active');
+        }
+
+        // Add click event listeners to all sidebar links
+        document.querySelectorAll('#sidebar ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Get the href attribute of the clicked link
+                const sectionId = this.getAttribute('href');
+                // Show the corresponding section
+                showSection(sectionId);
+            });
+        });
+
+        // Show "About Me" section by default on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('#about');
+        });
+    </script>
+</body>
+
+</html>
